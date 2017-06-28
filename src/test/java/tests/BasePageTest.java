@@ -16,6 +16,7 @@ public class BasePageTest {
     public LoginPage loginPage;
     public LogoutPage logoutPage;
     public HomePage homePage;
+    public NavigationBar navigationBar;
     public TaxesPage taxesPage;
 
     @Before
@@ -30,6 +31,7 @@ public class BasePageTest {
         clientsPage = new ClientsPage(driver);
         clientsPage = new ClientsPage(driver);
         homePage = new HomePage(driver);
+        navigationBar = new NavigationBar(driver);
         taxesPage = new TaxesPage(driver);
     }
 
