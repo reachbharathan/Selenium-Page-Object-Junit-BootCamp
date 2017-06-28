@@ -10,7 +10,7 @@ public class Step1RuggedTest extends BasePageTest {
     @Test
     public void testEditAccount() {
         loginPage.login(USER_NAME, PASSWORD);
-        navigationBar.clickClientsLink();
+        navigationBar.clickNavigationLink("clients");
         clientsPage.searchClient("Thoughtworks");
         clientsPage.editClientDetails("ThoughtworksNew", "twAddressNew");
         logoutPage.logout();
@@ -19,7 +19,7 @@ public class Step1RuggedTest extends BasePageTest {
     @Test
     public void testAddQuotationForClient() {
         loginPage.login(USER_NAME, PASSWORD);
-        navigationBar.clickClientsLink();
+        navigationBar.clickNavigationLink("clients");
         clientsPage.searchClient("Thoughtworks");
         clientsPage.addNewQuotation("Quotation1", "Event1", "30-12-2016");
         logoutPage.logout();
@@ -28,7 +28,7 @@ public class Step1RuggedTest extends BasePageTest {
     @Test
     public void testServiceTaxSearch() {
         loginPage.login(USER_NAME, PASSWORD);
-        navigationBar.clickTaxesLink();
+        navigationBar.clickNavigationLink("taxes");
         taxesPage.filterISTByDate("01-07-2017", "31-07-2017");
         logoutPage.logout();
     }
